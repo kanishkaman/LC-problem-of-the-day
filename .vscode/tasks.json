@@ -1,0 +1,55 @@
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "Run Python with I/O",
+//             "type": "shell",
+//             "command": "python",
+//             "args": [
+//                 "${fileDirname}/${fileBasenameNoExtension}.py",
+//                 "<",
+//                 "${workspaceFolder}/input.txt",
+//                 ">",
+//                 "${workspaceFolder}/output.txt"
+//             ],
+//             "group": {
+//                 "kind": "build",
+//                 "isDefault": true
+//             },
+//             "presentation": {
+//                 "reveal": "always",
+//                 "panel": "shared"
+//             },
+//             "problemMatcher": []
+//         }
+//     ]
+// }
+
+// With DRIVER CODE:
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Python with I/O",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "runner.py",
+                "${fileBasename}",
+                "<",
+                "input.txt",
+                ">",
+                "output.txt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
